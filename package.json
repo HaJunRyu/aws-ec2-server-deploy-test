@@ -1,0 +1,16 @@
+{
+  "name": "ec2-server-test",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server"
+  },
+  "keywords": [],
+  "author": "HajunRyu",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.879.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "mysql": "^2.18.1"
+  }
+}

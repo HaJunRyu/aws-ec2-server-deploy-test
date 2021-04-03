@@ -1,0 +1,5 @@
+# 설정 파일
+config/
+
+# node_modules
+node_modules/
