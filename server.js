@@ -52,7 +52,12 @@ app.post('/image_upload', (req, res) => {
       console.log(data);
       let result = '';
       if (err) result = 'Fail';
-      else result = data.Location;
+      else {
+        result = JSON.stringify({
+          src: data.Location,
+          alt: data.Key
+        });
+      }
       res.send(result);
     });
   });
