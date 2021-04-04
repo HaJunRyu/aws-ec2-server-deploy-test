@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+const cors = require('cors');
+
+app.use(cors());
+
 const fs = require('fs');
 const formidable = require('formidable');
 
@@ -45,9 +49,10 @@ app.post('/image_upload', (req, res) => {
       Body: require('fs').createReadStream(files.image.path)
     };
     s3.upload(params, (err, data) => {
+      console.log(data);
       let result = '';
       if (err) result = 'Fail';
-      else result = data.location;
+      else result = data.Location;
       res.send(result);
     });
   });
